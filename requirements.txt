@@ -1,0 +1,30 @@
+# Multi-Agent Financial Analysis System - Requirements
+# Course: Natural Language Processing (MSAAI) - Final Team Project (MS_AAI_520_GRP3)
+# Python: >= 3.10, < 3.14
+
+# Core Financial Data & Analytics
+yfinance>=0.2.40
+pandas>=2.0.0
+numpy>=1.24.0
+scipy>=1.10.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# In-Memory Vector Search
+faiss-cpu>=1.8.0
+
+# Web Framework & API Backend
+fastapi>=0.100.0
+uvicorn[standard]>=0.23.0
+pydantic>=2.0.0
+
+# Model Context Protocol & AI Agents
+mcp>=1.3.0
+google-adk>=0.1.0
+langchain-google-genai>=2.0.0
+langchain-core>=0.3.0
+
+# Jupyter Execution & Export
+ipykernel>=6.25.0
+nbformat>=5.9.0
+nbconvert>=7.10.0

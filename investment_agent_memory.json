@@ -1,0 +1,86 @@
+[
+  {
+    "timestamp": "2026-10-18T07:30:20.810486+00:00",
+    "ticker": "AAPL",
+    "trend_signal": "Bullish",
+    "period_return_pct": 27.32594625054996,
+    "evaluation_score": 100.0,
+    "llm_enabled": false,
+    "lesson": "Use prior trend/evaluation context when planning the next research run."
+  },
+  {
+    "timestamp": "2026-10-18T07:32:35.458025+00:00",
+    "ticker": "AAPL",
+    "trend_signal": "Bullish",
+    "period_return_pct": 27.32594625054996,
+    "evaluation_score": 100.0,
+    "lesson": "Compare future runs with previous market trend and evaluation score."
+  },
+  {
+    "timestamp": "2026-10-18T07:32:36.371512+00:00",
+    "ticker": "AAPL",
+    "trend_signal": "Bullish",
+    "period_return_pct": 27.32594625054996,
+    "evaluation_score": 100.0,
+    "lesson": "Compare future runs with previous market trend and evaluation score."
+  },
+  {
+    "timestamp": "2026-10-18T07:32:37.044624+00:00",
+    "ticker": "AAPL",
+    "trend_signal": "Bullish",
+    "period_return_pct": 27.32594625054996,
+    "evaluation_score": 100.0,
+    "llm_enabled": false,
+    "lesson": "Use prior trend/evaluation context when planning the next research run."
+  },
+  {
+    "timestamp": "2026-10-18T08:01:13.265145+00:00",
+    "ticker": "AAPL",
+    "trend_signal": "Bullish",
+    "period_return_pct": 27.32594625054996,
+    "evaluation_score": 100.0,
+    "lesson": "Compare future runs with previous market trend and evaluation score."
+  },
+  {
+    "timestamp": "2026-10-18T08:01:14.153897+00:00",
+    "ticker": "AAPL",
+    "trend_signal": "Bullish",
+    "period_return_pct": 27.32594625054996,
+    "evaluation_score": 100.0,
+    "lesson": "Compare future runs with previous market trend and evaluation score."
+  },
+  {
+    "timestamp": "2026-10-18T08:01:14.810978+00:00",
+    "ticker": "AAPL",
+    "trend_signal": "Bullish",
+    "period_return_pct": 27.32594625054996,
+    "evaluation_score": 100.0,
+    "llm_enabled": false,
+    "lesson": "Use prior trend/evaluation context when planning the next research run."
+  },
+  {
+    "timestamp": "2026-10-18T08:05:47.657710+00:00",
+    "ticker": "AAPL",
+    "trend_signal": "Bullish",
+    "period_return_pct": 27.32594625054996,
+    "evaluation_score": 100.0,
+    "lesson": "Compare future runs with previous market trend and evaluation score."
+  },
+  {
+    "timestamp": "2026-10-18T08:05:49.758809+00:00",
+    "ticker": "AAPL",
+    "trend_signal": "Bullish",
+    "period_return_pct": 27.32594625054996,
+    "evaluation_score": 100.0,
+    "lesson": "Compare future runs with previous market trend and evaluation score."
+  },
+  {
+    "timestamp": "2026-10-18T08:05:50.491951+00:00",
+    "ticker": "AAPL",
+    "trend_signal": "Bullish",
+    "period_return_pct": 27.32594625054996,
+    "evaluation_score": 100.0,
+    "llm_enabled": false,
+    "lesson": "Use prior trend/evaluation context when planning the next research run."
+  }
+]

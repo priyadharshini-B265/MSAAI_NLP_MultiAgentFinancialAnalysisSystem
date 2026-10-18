@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gemini ADK Multi-Agent Orchestrator — Financial Analysis System</title>
+  <meta name="description" content="Autonomous Multi-Agent Financial Analysis System powered by Google Agent Development Kit (ADK), Model Context Protocol (FastMCP), and Specialist Routing.">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="app-container">
+
+    <!-- Top Header Bar -->
+    <header class="header-bar">
+      <div class="brand-section">
+        <div class="logo-icon">⚡</div>
+        <div>
+          <h1 class="brand-title">Gemini ADK Multi-Agent Financial Orchestrator</h1>
+          <p class="brand-subtitle">Autonomous Institutional Investment System with Specialist Router & FastMCP Tools</p>
+        </div>
+      </div>
+      <div class="system-status-pills">
+        <div class="status-badge">
+          <span class="pulse-dot"></span>
+          <span>Google ADK Active</span>
+        </div>
+        <div class="tag-badge">
+          <span>MCP: FastMCP stdio</span>
+        </div>
+        <div class="tag-badge">
+          <span>Model: Gemini 2.5 Flash</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Top Architecture Visualizer -->
+    <section class="architecture-section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span>🧠</span>
+          <span>Multi-Agent System Hierarchy & Exact Deterministic Specialists</span>
+        </h2>
+        <span class="tag-badge">Decentralized Execution Graph</span>
+      </div>
+
+      <div class="agent-map-grid">
+        <!-- Orchestrator -->
+        <div class="agent-card orchestrator-card" id="card-orchestrator">
+          <div>
+            <span class="agent-badge badge-cio">Central Coordinator</span>
+            <div class="agent-card-title">Main Investment Orchestrator</div>
+            <div class="agent-card-desc">
+              Coordinates the dynamic 7-step research plan, queries the in-memory FAISS vector store, dispatches FastMCP tools, and drives the Evaluator-Optimizer closed-loop refinement cycle.
+            </div>
+            <div class="agent-tool-tags">
+              <span class="tool-tag">MainInvestmentOrchestrator</span>
+              <span class="tool-tag">FastMCP stdio</span>
+              <span class="tool-tag">FAISS FlatIP</span>
+            </div>
+          </div>
+          <div style="font-size:36px; padding-right:12px;">🏛️</div>
+        </div>
+
+        <!-- Agent 1: Research Manager -->
+        <div class="agent-card" id="card-manager">
+          <span class="agent-badge badge-cio">Planner (Step 1-2)</span>
+          <div class="agent-card-title">Research Manager</div>
+          <div class="agent-card-desc">
+            Creates the structured 7-step research plan and queries the in-memory FAISS vector index for past lessons and critiques across prior runs.
+          </div>
+          <div class="agent-tool-tags">
+            <span class="tool-tag">ResearchManagerAgent</span>
+            <span class="tool-tag">7-Step Plan DAG</span>
+          </div>
+        </div>
+
+        <!-- Agent 2: Market Specialist -->
+        <div class="agent-card" id="card-market">
+          <span class="agent-badge badge-market">Market Technicals (Step 1)</span>
+          <div class="agent-card-title">Market Specialist</div>
+          <div class="agent-card-desc">
+            Analyzes prices, period returns, annualized volatility, 20/50-day moving averages, and technical trend signals (Bullish/Bearish).
+          </div>
+          <div class="agent-tool-tags">
+            <span class="tool-tag">MarketSpecialistAgent</span>
+            <span class="tool-tag">20/50 DMA</span>
+            <span class="tool-tag">Vol %</span>
+          </div>
+        </div>
+
+        <!-- Agent 3: Earnings Specialist -->
+        <div class="agent-card" id="card-earnings">
+          <span class="agent-badge badge-earnings">Financial Fundamentals (Step 2)</span>
+          <div class="agent-card-title">Earnings Specialist</div>
+          <div class="agent-card-desc">
+            Retrieves company financial statements, operating margins, trailing/forward P/E, ROE, debt-to-equity leverage, and revenue growth.
+          </div>
+          <div class="agent-tool-tags">
+            <span class="tool-tag">EarningsSpecialistAgent</span>
+            <span class="tool-tag">P/E Ratios</span>
+            <span class="tool-tag">Operating Margins</span>
+          </div>
+        </div>
+
+        <!-- Agent 4: News Specialist -->
+        <div class="agent-card" id="card-news">
+          <span class="agent-badge badge-news">News & Sentiment (Step 3)</span>
+          <div class="agent-card-title">News Specialist</div>
+          <div class="agent-card-desc">
+            Ingests headlines, preprocesses text, classifies category (earnings/market/news), extracts topics, and generates bulleted intelligence summaries.
+          </div>
+          <div class="agent-tool-tags">
+            <span class="tool-tag">NewsSpecialistAgent</span>
+            <span class="tool-tag">3-Stage Prompt Chain</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation Tabs -->
+    <nav class="tabs-navigation" aria-label="Workflow Navigation">
+      <button class="tab-btn active" data-tab="tab-orchestrator" id="nav-orchestrator">
+        <span>🚀</span> Orchestrator Live Execution
+      </button>
+      <button class="tab-btn" data-tab="tab-router" id="nav-router">
+        <span>🔀</span> Dynamic Router Engine
+      </button>
+      <button class="tab-btn" data-tab="tab-prompt-chain" id="nav-prompt-chain">
+        <span>🔗</span> Pattern 1: Prompt Chaining
+      </button>
+      <button class="tab-btn" data-tab="tab-optimizer" id="nav-optimizer">
+        <span>🔄</span> Pattern 3: Evaluator-Optimizer
+      </button>
+      <button class="tab-btn" data-tab="tab-memory" id="nav-memory">
+        <span>🧠</span> Episodic Memory Learning
+      </button>
+      <button class="tab-btn" data-tab="tab-mcp" id="nav-mcp">
+        <span>🛠️</span> FastMCP Tool Inspector
+      </button>
+      <button class="tab-btn" data-tab="tab-figures" id="nav-figures">
+        <span>📊</span> Analytics Gallery
+      </button>
+    </nav>
+
+    <!-- =========================================================================
+         TAB 1: Orchestrator Live Execution
+         ========================================================================= -->
+    <div class="tab-content active" id="tab-orchestrator">
+      <div class="control-grid">
+        <!-- Left Control Form -->
+        <div class="control-panel">
+          <div class="section-title" style="margin-bottom:18px;">
+            <span>⚙️</span> Research Execution Setup
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="input-ticker">Target Equity Symbol</label>
+            <input type="text" class="form-input" id="input-ticker" value="AAPL" placeholder="e.g. AAPL, NVDA, JPM">
+            <div class="quick-tickers">
+              <button class="quick-ticker-btn" data-ticker="AAPL">AAPL</button>
+              <button class="quick-ticker-btn" data-ticker="NVDA">NVDA</button>
+              <button class="quick-ticker-btn" data-ticker="JPM">JPM</button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="select-period">Historical Pricing Window</label>
+            <select class="form-select" id="select-period">
+              <option value="6mo" selected>6 Months (Standard)</option>
+              <option value="1y">1 Year (Extended)</option>
+              <option value="3mo">3 Months (Tactical)</option>
+            </select>
+          </div>
+
+          <button class="btn-primary" id="btn-run-orchestrator">
+            <div class="spinner" id="orchestrator-spinner" style="display:none;"></div>
+            <span id="btn-orchestrator-text">Run Multi-Agent Orchestrator</span>
+          </button>
+
+          <div style="margin-top:20px; font-size:12px; color:var(--text-muted); line-height:1.4;">
+            <strong>Execution Pipeline:</strong><br/>
+            1. Recall past critique memories<br/>
+            2. Build adaptive dynamic plan<br/>
+            3. Call FastMCP tools over stdio<br/>
+            4. Execute 3-stage prompt chain<br/>
+            5. Dispatches 4 specialist sub-agents<br/>
+            6. Evaluator-Optimizer convergence<br/>
+            7. Self-reflection & memory update
+          </div>
+        </div>
+
+        <!-- Right Results Panel -->
+        <div class="results-panel">
+          <!-- Terminal -->
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <span class="terminal-dot dot-red"></span>
+              <span class="terminal-dot dot-yellow"></span>
+              <span class="terminal-dot dot-green"></span>
+              <span class="terminal-title">live_orchestrator_telemetry.log</span>
+            </div>
+            <div class="terminal-body" id="terminal-logs">
+              <div class="log-entry">
+                <span class="log-time">READY</span>
+                <span class="log-agent">[System]</span>
+                <span class="log-msg">Ready to spawn multi-agent financial research pipeline. Click 'Run Multi-Agent Orchestrator'.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Key Metrics Grid -->
+          <div class="metric-cards-grid">
+            <div class="metric-card">
+              <div class="metric-header">Consensus Score</div>
+              <div class="metric-value" id="metric-composite">82.3/100</div>
+              <div class="metric-sub sub-bullish" id="metric-stance">Strong Buy</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-header">Market Price</div>
+              <div class="metric-value" id="metric-price">$343.46</div>
+              <div class="metric-sub" style="color:var(--text-muted);">Verified FastMCP</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-header">Operating Margin</div>
+              <div class="metric-value" id="metric-margin">32.6%</div>
+              <div class="metric-sub sub-bullish">Tier 1 Solvency</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-header">14-Day RSI</div>
+              <div class="metric-value" id="metric-rsi">56.4</div>
+              <div class="metric-sub sub-neutral">Constructive Momentum</div>
+            </div>
+          </div>
+
+          <!-- Specialist Dossier Summary Cards -->
+          <div style="font-size:13px; font-weight:600; color:#cbd5e1; margin-bottom:10px;">Consolidated Specialist Dossier:</div>
+          <div class="agent-map-grid" id="specialist-cards-container" style="margin-bottom:24px;">
+            <div class="agent-card">
+              <span class="agent-badge badge-earnings">Strong Bullish</span>
+              <div class="agent-card-title">Earnings Specialist (88.5/100)</div>
+              <div class="agent-card-desc">Operating Margin: 32.6% | FCF: $108B</div>
+            </div>
+            <div class="agent-card">
+              <span class="agent-badge badge-market">Strong Bullish</span>
+              <div class="agent-card-title">Market Specialist (84.0/100)</div>
+              <div class="agent-card-desc">Golden Cross Alignment | RSI: 56.4</div>
+            </div>
+            <div class="agent-card">
+              <span class="agent-badge badge-news">Bullish</span>
+              <div class="agent-card-title">News Specialist (78.0/100)</div>
+              <div class="agent-card-desc">Services Revenue Growth vs DOJ Suit</div>
+            </div>
+            <div class="agent-card">
+              <span class="agent-badge badge-risk">Neutral</span>
+              <div class="agent-card-title">Risk Specialist (75.0/100)</div>
+              <div class="agent-card-desc">Fed Rate 4.75% | SEC 10-K Item 1A</div>
+            </div>
+          </div>
+
+          <!-- Memo Preview -->
+          <div style="font-size:13px; font-weight:600; color:#cbd5e1; margin-bottom:10px;">Delivered Institutional Investment Memo:</div>
+          <div class="memo-container" id="memo-display">
+            <h2 style="color:#ffffff; margin-top:0;">Institutional Research Memo: AAPL (Apple Inc.)</h2>
+            <p><strong>Executive Thesis:</strong> Apple Inc. maintains a highly constructive investment posture with a composite specialist score of 82.3/100 (Strong Buy).</p>
+            <h3 style="color:#a5b4fc;">Specialist Dossier Summary</h3>
+            <ul>
+              <li><strong>Earnings & Fundamentals:</strong> Operating Margin: 32.6% | Rev Growth: +16.4% | ROE: 145.2%</li>
+              <li><strong>Market & Technicals:</strong> Price: $343.46 | RSI-14: 56.4 | Trend: Strong Bullish (Golden Cross)</li>
+              <li><strong>News & Sentiment:</strong> Composite Sentiment: +0.65 (Bullish Services Expansion)</li>
+              <li><strong>Risk & Macro:</strong> Fed Rate: 4.75% | Core CPI: 2.6% | Grounded in SEC 10-K Item 1A Disclosures</li>
+            </ul>
+            <h3 style="color:#a5b4fc;">Downside Risk & Regulatory Stress-Test</h3>
+            <p>Bear Case Catalyst: The active DOJ antitrust lawsuit concerning App Store commission structures poses a monitored headwind. However, high customer switching costs and recurring Services revenue buffer downside risk.</p>
+            <h3 style="color:#a5b4fc;">Analytical Limitations & Uncertainty Disclosure</h3>
+            <p>This memo serves as an institutional research aid, not personalized financial advice. Publicly available feeds may experience transmission latency or revisions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         TAB 2: Dynamic Router Engine
+         ========================================================================= -->
+    <div class="tab-content" id="tab-router">
+      <div class="control-grid">
+        <div class="control-panel">
+          <div class="section-title" style="margin-bottom:18px;">
+            <span>🔀</span> Dynamic Router Config
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="select-router-preset">Pre-Configured Test Contract</label>
+            <select class="form-select" id="select-router-preset">
+              <option value="earnings_margins" selected>1. Earnings Inquiry (NVDA Margins)</option>
+              <option value="market_rsi">2. Technical Inquiry (NVDA 14-day RSI)</option>
+              <option value="news_antitrust">3. News Inquiry (AAPL DOJ Antitrust)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="input-router-ticker">Ticker</label>
+            <input type="text" class="form-input" id="input-router-ticker" value="NVDA">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="select-router-target">Target Specialist</label>
+            <select class="form-select" id="select-router-target">
+              <option value="earnings_analyst" selected>Earnings Specialist (CFA)</option>
+              <option value="market_analyst">Market Specialist (CMT)</option>
+              <option value="news_analyst">News Specialist (Sentiment)</option>
+              <option value="risk_analyst">Risk Specialist (Macro)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="input-router-query">Research Query</label>
+            <textarea class="form-textarea" id="input-router-query" rows="3">Audit NVDA operating margin expansion, cloud services growth walk, and gross profitability.</textarea>
+          </div>
+
+          <button class="btn-primary" id="btn-run-router">
+            <span>Dispatch Contract to Router</span>
+          </button>
+        </div>
+
+        <div class="results-panel">
+          <div class="section-title" style="margin-bottom:14px;">
+            <span>🎯</span> Dynamic Routing Dispatch Results
+          </div>
+          <p style="font-size:13px; color:var(--text-secondary); margin-bottom:16px;">
+            In contrast to static execution where every agent runs blindly, the <strong>Specialist Router</strong> evaluates the contract and dispatches <em>only</em> the qualified specialist persona, skipping irrelevant agents.
+          </p>
+
+          <div id="router-results-box" style="background:rgba(15, 23, 42, 0.7); border:1px solid var(--border-subtle); border-radius:12px; padding:20px;">
+            <div style="color:var(--text-muted); font-size:13px;">Click 'Dispatch Contract to Router' to observe dynamic routing in action.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         TAB 3: Pattern 1: Prompt Chaining
+         ========================================================================= -->
+    <div class="tab-content" id="tab-prompt-chain">
+      <div class="control-grid">
+        <div class="control-panel">
+          <div class="section-title" style="margin-bottom:18px;">
+            <span>🔗</span> Prompt Chain Setup
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="input-chain-ticker">Ticker</label>
+            <input type="text" class="form-input" id="input-chain-ticker" value="AAPL">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="input-chain-headline">Raw Financial Headline</label>
+            <textarea class="form-textarea" id="input-chain-headline" rows="3">Apple Reports Record Services Revenue and Strong iPhone 16 Pro Demand</textarea>
+          </div>
+
+          <button class="btn-primary" id="btn-run-chain">
+            <span>Execute 3-Stage Prompt Chain</span>
+          </button>
+
+          <div style="margin-top:20px; font-size:12px; color:var(--text-muted); line-height:1.5;">
+            <strong>Stage Flow:</strong><br/>
+            • <em>Stage 1:</em> Ingest & Classify (LLM identifies semantic category & sentiment)<br/>
+            • <em>Stage 2:</em> Extract (Pipes Stage 1 output to extract specific dollar amounts & catalysts)<br/>
+            • <em>Stage 3:</em> Summarize (Pipes Stage 2 output to synthesize institutional briefing)
+          </div>
+        </div>
+
+        <div class="results-panel">
+          <div class="section-title" style="margin-bottom:14px;">
+            <span>📜</span> Sequential Semantic Handoffs (Pydantic Contracts)
+          </div>
+          <div id="chain-results-box">
+            <div style="color:var(--text-muted); font-size:13px;">Click 'Execute 3-Stage Prompt Chain' to inspect the typed handoffs.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         TAB 4: Pattern 3: Evaluator-Optimizer
+         ========================================================================= -->
+    <div class="tab-content" id="tab-optimizer">
+      <div class="control-grid">
+        <div class="control-panel">
+          <div class="section-title" style="margin-bottom:18px;">
+            <span>🔄</span> Closed Loop Setup
+          </div>
+          <p style="font-size:12px; color:var(--text-secondary); margin-bottom:18px; line-height:1.5;">
+            Rather than appending static boilerplate strings, the <strong>Senior Portfolio Critic</strong> audits the draft across a 4-dimensional quantitative rubric (100 pt scale) and the <strong>Synthesis Optimizer</strong> actively rewrites the text until Score &ge; 85.0.
+          </p>
+
+          <button class="btn-primary" id="btn-run-optimizer">
+            <span>Simulate Evaluator-Optimizer Loop</span>
+          </button>
+        </div>
+
+        <div class="results-panel">
+          <div class="section-title" style="margin-bottom:14px;">
+            <span>📈</span> Iterative Refinement & Score Convergence
+          </div>
+          <div id="optimizer-results-box">
+            <div style="color:var(--text-muted); font-size:13px;">Click 'Simulate Evaluator-Optimizer Loop' to watch iteration progression.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         TAB 5: Episodic Memory Learning
+         ========================================================================= -->
+    <div class="tab-content" id="tab-memory">
+      <div class="control-grid">
+        <div class="control-panel">
+          <div class="section-title" style="margin-bottom:18px;">
+            <span>🧠</span> FAISS In-Memory Vector Store
+          </div>
+          <div style="display:flex; gap:8px; margin-bottom:12px;">
+            <span class="tag-badge" style="background:rgba(99,102,241,0.2); color:#a5b4fc; border:1px solid rgba(99,102,241,0.4);">faiss.IndexFlatIP (64d)</span>
+            <span class="tag-badge" style="background:rgba(16,185,129,0.2); color:#6ee7b7; border:1px solid rgba(16,185,129,0.4);">Cosine Similarity</span>
+          </div>
+          <p style="font-size:12px; color:var(--text-secondary); margin-bottom:14px; line-height:1.5;">
+            Past lessons, evaluation critiques, and market signals are converted into 64-dimensional dense embeddings and indexed directly in an <strong>in-memory FAISS vector index</strong> for sub-millisecond semantic similarity search.
+          </p>
+
+          <div class="form-group">
+            <label class="form-label" for="input-faiss-query">FAISS Semantic Vector Query</label>
+            <input type="text" class="form-input" id="input-faiss-query" value="antitrust regulatory overhang and DOJ probe" placeholder="e.g. antitrust regulatory risk, high operating margins...">
+          </div>
+
+          <div style="display:flex; gap:6px; margin-bottom:14px; flex-wrap:wrap;">
+            <button type="button" class="quick-query-btn tag-badge" data-query="DOJ antitrust regulatory risk">Antitrust Risk</button>
+            <button type="button" class="quick-query-btn tag-badge" data-query="Audited operating profit margin">Operating Margin</button>
+            <button type="button" class="quick-query-btn tag-badge" data-query="Golden cross moving average trend">Golden Cross</button>
+          </div>
+
+          <button class="btn-primary" id="btn-search-faiss" style="margin-bottom:14px;">
+            <span>Search FAISS Vector Memory</span>
+          </button>
+
+          <hr style="border-color:var(--border-color); margin:16px 0;">
+
+          <div class="section-title" style="font-size:14px; margin-bottom:8px;">
+            <span>🔄</span> Adaptation Simulation
+          </div>
+          <p style="font-size:11px; color:var(--text-muted); margin-bottom:12px;">
+            Demonstrates Run 1 (Cold Start) vs. Run 2 (Memory-Adapted) execution plans conditioned on FAISS vector retrieval.
+          </p>
+          <button class="btn-secondary" id="btn-run-memory">
+            <span>Simulate Learning Across Runs</span>
+          </button>
+        </div>
+
+        <div class="results-panel">
+          <div class="section-title" style="margin-bottom:14px;">
+            <span>💾</span> Run 1 vs. Run 2 Plan Adaptation
+          </div>
+          <div id="memory-results-box">
+            <div style="color:var(--text-muted); font-size:13px;">Click 'Simulate Learning Across Runs' to see how memory changes future plans.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         TAB 6: FastMCP Tool Inspector
+         ========================================================================= -->
+    <div class="tab-content" id="tab-mcp">
+      <div class="control-grid">
+        <div class="control-panel">
+          <div class="section-title" style="margin-bottom:18px;">
+            <span>🛠️</span> FastMCP Stdio Tools
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="select-mcp-tool">Select MCP Tool</label>
+            <select class="form-select" id="select-mcp-tool">
+              <option value="get_market_technicals" selected>get_market_technicals</option>
+              <option value="get_financial_statements">get_financial_statements</option>
+              <option value="get_financial_news">get_financial_news</option>
+              <option value="compute_technical_indicators">compute_technical_indicators</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="input-mcp-ticker">Ticker Argument</label>
+            <input type="text" class="form-input" id="input-mcp-ticker" value="AAPL">
+          </div>
+
+          <button class="btn-primary" id="btn-call-mcp">
+            <span>Invoke Tool over FastMCP</span>
+          </button>
+        </div>
+
+        <div class="results-panel">
+          <div class="section-title" style="margin-bottom:14px;">
+            <span>📦</span> MCP Stdio Tool Response Payload
+          </div>
+          <div id="mcp-results-box">
+            <div style="color:var(--text-muted); font-size:13px;">Select a tool and click 'Invoke Tool over FastMCP' to test live tool execution.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         TAB 7: Analytics Gallery
+         ========================================================================= -->
+    <div class="tab-content" id="tab-figures">
+      <div class="figure-grid">
+        <div class="figure-box">
+          <div class="figure-title">Figure 1: Market Technicals & 14-Day RSI (6-Month Lookback)</div>
+          <img class="figure-img" src="/api/figures/figure_1_market_technicals_rsi.png" alt="Figure 1 Technicals and RSI">
+        </div>
+        <div class="figure-box">
+          <div class="figure-title">Figure 2: Specialist Routing Dossier Domain Scores & Consensus</div>
+          <img class="figure-img" src="/api/figures/figure_2_specialist_routing_dossier.png" alt="Figure 2 Specialist Dossier">
+        </div>
+        <div class="figure-box">
+          <div class="figure-title">Figure 3: Workflow Pattern 3 — Evaluator-Optimizer Convergence Curve</div>
+          <img class="figure-img" src="/api/figures/figure_3_evaluator_optimizer_convergence.png" alt="Figure 3 Evaluator Convergence">
+        </div>
+        <div class="figure-box">
+          <div class="figure-title">Figure 4: Agent Function — Learning Across Runs via Episodic Memory</div>
+          <img class="figure-img" src="/api/figures/figure_4_episodic_memory_learning_curve.png" alt="Figure 4 Episodic Memory">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

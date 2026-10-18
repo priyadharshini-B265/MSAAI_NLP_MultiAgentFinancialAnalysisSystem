@@ -1,0 +1,93 @@
+[
+  {
+    "id": 16,
+    "timestamp": "2026-10-18T07:09:27.752527+00:00",
+    "ticker": "AAPL",
+    "lesson": "Audited operating profitability verified at 30.5% with high free cash flow.",
+    "evaluation_score": 88.0,
+    "trend_signal": "Bullish",
+    "details": "",
+    "doc_text": "AAPL Audited operating profitability verified at 30.5% with high free cash flow.  Bullish"
+  },
+  {
+    "id": 17,
+    "timestamp": "2026-10-18T07:09:27.752716+00:00",
+    "ticker": "NVDA",
+    "lesson": "Triple-digit AI datacenter GPU revenue expansion and Golden Cross support.",
+    "evaluation_score": 92.0,
+    "trend_signal": "Strong Bullish",
+    "details": "",
+    "doc_text": "NVDA Triple-digit AI datacenter GPU revenue expansion and Golden Cross support.  Strong Bullish"
+  },
+  {
+    "id": 18,
+    "timestamp": "2026-10-18T07:09:29.492043+00:00",
+    "ticker": "AAPL",
+    "lesson": "Verified factual grounding and comprehensive downside scenario analysis.",
+    "evaluation_score": 100.0,
+    "trend_signal": "Strong Bullish (Golden Cross: Price > SMA50 > SMA200)",
+    "details": "Price: $343.46, Margin: 32.62%",
+    "doc_text": "AAPL Verified factual grounding and comprehensive downside scenario analysis. Price: $343.46, Margin: 32.62% Strong Bullish (Golden Cross: Price > SMA50 > SMA200)"
+  },
+  {
+    "id": 15,
+    "timestamp": "2026-10-18T07:10:37.525675+00:00",
+    "ticker": "AAPL",
+    "lesson": "Omitted ongoing DOJ antitrust and App Store regulatory risks in draft.",
+    "evaluation_score": 72.0,
+    "trend_signal": "Bullish",
+    "details": "",
+    "doc_text": "AAPL Omitted ongoing DOJ antitrust and App Store regulatory risks in draft.  Bullish"
+  },
+  {
+    "id": 16,
+    "timestamp": "2026-10-18T07:10:37.525976+00:00",
+    "ticker": "AAPL",
+    "lesson": "Audited operating profitability verified at 30.5% with high free cash flow.",
+    "evaluation_score": 88.0,
+    "trend_signal": "Bullish",
+    "details": "",
+    "doc_text": "AAPL Audited operating profitability verified at 30.5% with high free cash flow.  Bullish"
+  },
+  {
+    "id": 17,
+    "timestamp": "2026-10-18T07:10:37.526165+00:00",
+    "ticker": "NVDA",
+    "lesson": "Triple-digit AI datacenter GPU revenue expansion and Golden Cross support.",
+    "evaluation_score": 92.0,
+    "trend_signal": "Strong Bullish",
+    "details": "",
+    "doc_text": "NVDA Triple-digit AI datacenter GPU revenue expansion and Golden Cross support.  Strong Bullish"
+  },
+  {
+    "id": 18,
+    "timestamp": "2026-10-18T07:10:41.035592+00:00",
+    "ticker": "AAPL",
+    "lesson": "Verified factual grounding and comprehensive downside scenario analysis.",
+    "evaluation_score": 100.0,
+    "trend_signal": "Strong Bullish (Golden Cross: Price > SMA50 > SMA200)",
+    "details": "Price: $343.46, Margin: 32.62%",
+    "doc_text": "AAPL Verified factual grounding and comprehensive downside scenario analysis. Price: $343.46, Margin: 32.62% Strong Bullish (Golden Cross: Price > SMA50 > SMA200)"
+  },
+  {
+    "timestamp": "2026-10-18T07:50:42.380002+00:00",
+    "ticker": "AAPL",
+    "evaluator_score": 90.0,
+    "trend_signal": "Strong Bullish (Golden Cross: Price > SMA50 > SMA200)",
+    "evaluator_critique_lesson": "Verified factual grounding and comprehensive downside scenario analysis."
+  },
+  {
+    "timestamp": "2026-10-18T08:07:28.291893+00:00",
+    "ticker": "NVDA",
+    "evaluator_score": 90.0,
+    "trend_signal": "Consolidation / Neutral",
+    "evaluator_critique_lesson": "Verified factual grounding and comprehensive downside scenario analysis."
+  },
+  {
+    "timestamp": "2026-10-18T08:07:58.623924+00:00",
+    "ticker": "AAPL",
+    "evaluator_score": 90.0,
+    "trend_signal": "Strong Bullish (Golden Cross: Price > SMA50 > SMA200)",
+    "evaluator_critique_lesson": "Verified factual grounding and comprehensive downside scenario analysis."
+  }
+]
