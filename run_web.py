@@ -27,6 +27,7 @@ def main():
     print("Press CTRL+C at any time to stop the server.\n")
 
     sys.path.insert(0, str(BASE_DIR))
+    sys.path.insert(0, str(BASE_DIR / "src"))
     os.chdir(str(WEB_DIR))
 
     try:

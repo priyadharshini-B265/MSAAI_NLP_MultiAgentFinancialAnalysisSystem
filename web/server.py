@@ -23,11 +23,16 @@ from fastapi.responses import FileResponse, HTMLResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
-# Ensure mod7_final_project is on sys.path
+# Ensure root and src directories are on sys.path
 BASE_DIR = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(BASE_DIR))
+for p in [BASE_DIR, BASE_DIR / "src"]:
+    if str(p) not in sys.path:
+        sys.path.insert(0, str(p))
 
-import financial_mcp_server as mcp_srv
+try:
+    import financial_mcp_server as mcp_srv
+except ImportError:
+    from src import financial_mcp_server as mcp_srv
 
 logger = logging.getLogger("ADKWebServer")
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
@@ -47,7 +52,13 @@ app.add_middleware(
 )
 
 STATIC_DIR = Path(__file__).resolve().parent / "static"
-MEMORY_FILE = BASE_DIR / "orchestrator_agent_memory.json"
+if (BASE_DIR / "memory" / "orchestrator_agent_memory.json").exists():
+    MEMORY_FILE = BASE_DIR / "memory" / "orchestrator_agent_memory.json"
+elif (BASE_DIR / "orchestrator_agent_memory.json").exists():
+    MEMORY_FILE = BASE_DIR / "orchestrator_agent_memory.json"
+else:
+    (BASE_DIR / "memory").mkdir(parents=True, exist_ok=True)
+    MEMORY_FILE = BASE_DIR / "memory" / "orchestrator_agent_memory.json"
 
 # ==============================================================================
 # In-Memory FAISS Vector Store Engine

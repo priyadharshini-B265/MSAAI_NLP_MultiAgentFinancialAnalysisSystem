@@ -131,12 +131,12 @@ pip install -r requirements.txt
 ### Option 1: Run the Jupyter Notebook
 Open and run the multi-agent orchestrator notebook in Jupyter Notebook, JupyterLab, or VS Code:
 ```bash
-jupyter notebook Assignment_7_1_Multi_Agent_Financial_Analysis_System_Orchestrator.ipynb
+jupyter notebook notebooks/Assignment_7_1_Multi_Agent_Financial_Analysis_System_Orchestrator.ipynb
 ```
 *Note: The notebook contains all 71 original team cells fully intact, plus the 3 clean Add-On sections, and is pre-executed with all outputs, tables, and charts.*
 
 ### Option 2: Run the Interactive Web Dashboard
-Launch the FastAPI web server using the provided one-click launcher:
+Launch the FastAPI web server using the provided one-click launcher from the repository root:
 ```bash
 python run_web.py
 ```
@@ -153,7 +153,7 @@ http://127.0.0.1:8080
 ### Option 3: View Standalone HTML Report
 The notebook has been pre-compiled to a self-contained HTML report with embedded images:
 - Double click or open in any browser:
-  - `Assignment_7_1_Multi_Agent_Financial_Analysis_System_Orchestrator.html`
+  - `notebooks/Assignment_7_1_Multi_Agent_Financial_Analysis_System_Orchestrator.html`
 
 ---
 
@@ -161,23 +161,29 @@ The notebook has been pre-compiled to a self-contained HTML report with embedded
 
 ```text
 finalProject_submission/
-├── Assignment_7_1_Multi_Agent_Financial_Analysis_System_Orchestrator.ipynb # Primary executed multi-agent orchestrator notebook
-├── Assignment_7_1_Multi_Agent_Financial_Analysis_System_Orchestrator.html  # Standalone self-contained HTML report
-├── financial_mcp_server.py                                          # FastMCP stdio tool server
-├── investment_agent_memory.json                                     # Baseline JSON episodic memory
-├── orchestrator_agent_memory.json                                   # FAISS-indexed vector records
-├── figure_1_market_technicals_rsi.png                               # Publication chart: Technicals & RSI
-├── figure_2_specialist_routing_dossier.png                          # Publication chart: Specialist Dossiers
-├── figure_3_evaluator_optimizer_convergence.png                     # Publication chart: Optimizer Loop
-├── figure_4_episodic_memory_learning_curve.png                      # Publication chart: Memory Learning
-├── generate_figures.py                                              # Script reproducing all 4 figures
-├── requirements.txt                                                 # Pinned Python package dependencies
+├── notebooks/                                                       # Executed Jupyter notebooks & HTML reports
+│   ├── Assignment_7_1_Multi_Agent_Financial_Analysis_System_Orchestrator.ipynb # Primary executed multi-agent orchestrator notebook
+│   └── Assignment_7_1_Multi_Agent_Financial_Analysis_System_Orchestrator.html  # Standalone self-contained HTML report
+├── images/                                                          # High-resolution publication figures (300 DPI)
+│   ├── figure_1_market_technicals_rsi.png                           # Figure 1: Technicals, DMA & 14-Day RSI
+│   ├── figure_2_specialist_routing_dossier.png                      # Figure 2: Specialist Routing Contracts
+│   ├── figure_3_evaluator_optimizer_convergence.png                 # Figure 3: Closed-Loop Convergence
+│   └── figure_4_episodic_memory_learning_curve.png                  # Figure 4: In-Memory FAISS Learning Curve
+├── src/                                                             # Core Python source packages & tools
+│   ├── __init__.py                                                  # Python package initializer
+│   ├── financial_mcp_server.py                                      # FastMCP stdio tool server
+│   └── generate_figures.py                                          # Figure reproduction script
+├── memory/                                                          # Episodic & FAISS vector memory state
+│   ├── investment_agent_memory.json                                 # Baseline JSON episodic memory
+│   └── orchestrator_agent_memory.json                               # FAISS-indexed vector records (d=64)
+├── web/                                                             # Interactive Web Dashboard
+│   ├── server.py                                                    # FastAPI backend (6 agents + FAISS)
+│   └── static/
+│       ├── index.html                                               # UI (4-specialist widget, banner removed)
+│       ├── app.js                                                   # Telemetry, FAISS search & router client
+│       └── styles.css                                               # Glassmorphism styling & 4-col grid
 ├── run_web.py                                                       # One-click web server launcher
-├── README.md                                                        # This comprehensive guide
-└── web/                                                             # ADK Web Dashboard application
-    ├── server.py                                                    # FastAPI backend (exact agents & FAISS)
-    └── static/
-        ├── index.html                                               # Glassmorphism frontend UI
-        ├── app.js                                                   # Client interactivity & FAISS search
-        └── styles.css                                               # CSS styling & responsive grid
+├── requirements.txt                                                 # Pinned Python package dependencies
+├── README.md                                                        # Comprehensive guide & architecture
+└── .gitignore                                                       # Git ignore rules
 ```

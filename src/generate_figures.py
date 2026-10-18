@@ -12,7 +12,10 @@ plt.rcParams["font.sans-serif"] = ["Helvetica", "Arial", "DejaVu Sans"]
 plt.rcParams["axes.edgecolor"] = "#CBD5E1"
 plt.rcParams["axes.linewidth"] = 0.8
 
-OUT_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+OUT_DIR = os.path.join(BASE_DIR, "images")
+if not os.path.exists(OUT_DIR):
+    os.makedirs(OUT_DIR, exist_ok=True)
 
 def generate_figure_1_technicals(ticker="AAPL"):
     """Figure 1: AAPL Market Technicals & 14-Day RSI."""
