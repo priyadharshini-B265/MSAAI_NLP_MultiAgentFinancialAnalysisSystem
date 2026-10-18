@@ -129,9 +129,9 @@ pip install -r requirements.txt
 ```
 
 ### Option 1: Run the Jupyter Notebook
-Open and run either notebook in Jupyter Notebook, JupyterLab, or VS Code:
+Open and run the multi-agent orchestrator notebook in Jupyter Notebook, JupyterLab, or VS Code:
 ```bash
-jupyter notebook Assignment_7_1_Multi_Agent_Financial_Analysis_System.ipynb
+jupyter notebook Assignment_7_1_Multi_Agent_Financial_Analysis_System_Orchestrator.ipynb
 ```
 *Note: The notebook contains all 71 original team cells fully intact, plus the 3 clean Add-On sections, and is pre-executed with all outputs, tables, and charts.*
 
@@ -150,10 +150,9 @@ http://127.0.0.1:8080
 - Click **"Episodic Memory"** to execute live FAISS vector semantic queries.
 - Click **"Dynamic Router"** to test specialist contract dispatches.
 
-### Option 3: View Standalone HTML Reports
-Both notebooks have been pre-compiled to self-contained HTML reports with embedded images:
+### Option 3: View Standalone HTML Report
+The notebook has been pre-compiled to a self-contained HTML report with embedded images:
 - Double click or open in any browser:
-  - `Assignment_7_1_Multi_Agent_Financial_Analysis_System.html`
   - `Assignment_7_1_Multi_Agent_Financial_Analysis_System_Orchestrator.html`
 
 ---
@@ -162,10 +161,8 @@ Both notebooks have been pre-compiled to self-contained HTML reports with embedd
 
 ```text
 finalProject_submission/
-├── Assignment_7_1_Multi_Agent_Financial_Analysis_System.ipynb       # Primary executed team notebook
-├── Assignment_7_1_Multi_Agent_Financial_Analysis_System.html        # Primary standalone HTML report
-├── Assignment_7_1_Multi_Agent_Financial_Analysis_System_Orchestrator.ipynb # Orchestrator notebook
-├── Assignment_7_1_Multi_Agent_Financial_Analysis_System_Orchestrator.html  # Orchestrator HTML report
+├── Assignment_7_1_Multi_Agent_Financial_Analysis_System_Orchestrator.ipynb # Primary executed multi-agent orchestrator notebook
+├── Assignment_7_1_Multi_Agent_Financial_Analysis_System_Orchestrator.html  # Standalone self-contained HTML report
 ├── financial_mcp_server.py                                          # FastMCP stdio tool server
 ├── investment_agent_memory.json                                     # Baseline JSON episodic memory
 ├── orchestrator_agent_memory.json                                   # FAISS-indexed vector records
