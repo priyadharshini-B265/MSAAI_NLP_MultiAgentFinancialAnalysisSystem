@@ -1001,5 +1001,6 @@ app.mount("/static", StaticFiles(directory=str(STATIC_DIR)), name="static")
 if __name__ == "__main__":
     import uvicorn
     port = int(os.environ.get("PORT", 8080))
-    print(f"Starting Gemini ADK Multi-Agent Web App on http://127.0.0.1:{port}")
-    uvicorn.run("server:app", host="127.0.0.1", port=port, reload=False)
+    host = os.environ.get("HOST", "0.0.0.0")
+    print(f"Starting Gemini ADK Multi-Agent Web App on http://{host}:{port}")
+    uvicorn.run("server:app", host=host, port=port, reload=False)
