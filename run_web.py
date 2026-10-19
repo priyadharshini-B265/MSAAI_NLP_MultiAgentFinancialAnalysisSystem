@@ -28,11 +28,12 @@ def main():
 
     sys.path.insert(0, str(BASE_DIR))
     sys.path.insert(0, str(BASE_DIR / "src"))
+    sys.path.insert(0, str(WEB_DIR))
     os.chdir(str(WEB_DIR))
 
     try:
         import uvicorn
-        uvicorn.run("server:app", host="127.0.0.1", port=8080, reload=False)
+        uvicorn.run("server:app", host="127.0.0.1", port=8080, app_dir=str(WEB_DIR), reload=False)
     except KeyboardInterrupt:
         print("\nWeb server shut down successfully.")
     except Exception as e:
