@@ -958,9 +958,9 @@ async def call_mcp_tool(req: MCPCallRequest):
 @app.get("/api/figures/{figure_name}")
 async def get_figure(figure_name: str):
     """Serves high-DPI generated figures."""
-    fig_file = BASE_DIR / figure_name
-    if fig_file.exists():
-        return FileResponse(fig_file)
+    for candidate in [BASE_DIR / "images" / figure_name, BASE_DIR / figure_name]:
+        if candidate.exists():
+            return FileResponse(candidate)
     raise HTTPException(status_code=404, detail="Figure not found")
 
 
